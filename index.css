@@ -1,64 +1,64 @@
-body{
-    background-color: #d6cdfc;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
+body {
+  background-color: #d6cdfc;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
 }
 
-.wrapper{
-    background-color: #6943FF;
-    color: #FFFFFF;
-    width: 550px;
+.wrapper {
+  background-color: #6943ff;
+  color: #ffffff;
+  width: 550px;
 }
 
-.user-input-section{
-    color: #FFFFFF;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+.user-input-section {
+  color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.convertion-section{
-    background: #f4f4f4;
-    color: #3D3D3D;
-    padding: 5px;
+.convertion-section {
+  background: #f4f4f4;
+  color: #3d3d3d;
+  padding: 5px;
 }
 
-.convertion-section h2{
-    color: #5A537B;
+.convertion-section h2 {
+  color: #5a537b;
 }
 
-.converted-subsection{
-    background: #FFFFFF;
-    margin: 10px 20px;
-    padding: 3px 5px ;
+.converted-subsection {
+  background: #ffffff;
+  margin: 10px 20px;
+  padding: 3px 5px;
 }
 
-#num-input{
-    background-color: #6943FF;
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
-    font-family: inherit;
-    font-size: 36px;
-    width: 75px;
+#num-input {
+  background-color: #6943ff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 36px;
+  width: 75px;
 
-    text-align: center;
-    padding: 20px 10px;
+  text-align: center;
+  padding: 20px 10px;
 }
 
-#convert-btn{
-    background: #FFFFFF;
-    color: #3D3D3D;
-    border: 0;
-    margin: 20px 0;
-    padding:  10px 20px;
-    font-size: 20px;
+#convert-btn {
+  background: #ffffff;
+  color: #3d3d3d;
+  border: 0;
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 20px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -69,6 +69,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
