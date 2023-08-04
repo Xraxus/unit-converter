@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Unit converter</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="user-input-section">
+            <h1>Metric/Imperial unit conversion</h1>
+            <input type="number" id="num-input" value="1" required>
+            <button id="convert-btn">Convert</button>
+        </div>
+        <div class="convertion-section">
+            <div class="converted-subsection">
+                <h2>Length (meter - feet)</h2>
+                <p id="length">1 meters = 3.281 feet | 1 feet = 0.305 meters </p>
+            </div>
+            <div class="converted-subsection">
+                <h2>Volume (liters - gallons)</h2>
+                <p  id="volume">1 liters = 0.264 gallons | 1 gallons = 3.785 liters</p>
+            </div>
+            <div class="converted-subsection" >
+                <h2>Mass (kilograms - pounds)</h2>
+                <p id="mass">1 kilograms = 2.205 pounds | 1 pounds = 0.454 kilograms</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
