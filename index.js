@@ -1,31 +1,24 @@
-const meterToFeet = 3.2808399;
-const literToGallon = 0.264172052;
-const kilogramToPound = 2.20462262;
+const conversionData = [
+  { unit: "meters", convertedUnit: "feet", multiplier: 3.2808399 },
+  { unit: "liters", convertedUnit: "gallons", multiplier: 0.264172052 },
+  { unit: "kilograms", convertedUnit: "pounds", multiplier: 2.20462262 },
+];
 
 const convertBtn = document.getElementById("convert-btn");
 const userInput = document.getElementById("num-input");
-const lengthParagraph = document.getElementById("length");
-const volumeParagraph = document.getElementById("volume");
-const massParagraph = document.getElementById("mass");
+const conversionParagraphs = document.querySelectorAll(
+  ".converted-subsection p"
+);
+
+function convertUnits(inputValue, conversion) {
+  const convertedValue = (inputValue * conversion.multiplier).toFixed(3);
+  const reverseConvertedValue = (inputValue / conversion.multiplier).toFixed(3);
+  return `${inputValue} ${conversion.unit} = ${convertedValue} ${conversion.convertedUnit} | ${inputValue} ${conversion.convertedUnit} = ${reverseConvertedValue} ${conversion.unit}`;
+}
 
 convertBtn.addEventListener("click", function () {
   let inputValue = userInput.value;
-
-  lengthParagraph.textContent = `${inputValue} meters = ${(
-    inputValue * meterToFeet
-  ).toFixed(3)} feet | ${inputValue} feet = ${(
-    inputValue / meterToFeet
-  ).toFixed(3)} meters`;
-
-  volumeParagraph.textContent = `${inputValue} liters = ${(
-    inputValue * literToGallon
-  ).toFixed(3)} gallons | ${inputValue} gallons = ${(
-    inputValue / literToGallon
-  ).toFixed(3)} liters`;
-
-  massParagraph.textContent = `${inputValue} kilograms = ${(
-    inputValue * kilogramToPound
-  ).toFixed(3)} pounds | ${inputValue} pounds = ${(
-    inputValue / kilogramToPound
-  ).toFixed(3)} kilograms`;
+  conversionParagraphs.forEach((paragraph, index) => {
+    paragraph.textContent = convertUnits(inputValue, conversionData[index]);
+  });
 });
